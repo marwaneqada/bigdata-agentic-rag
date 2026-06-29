@@ -1,0 +1,13 @@
+streamlit>=1.40,<2
+langgraph>=0.4,<2
+langchain-core>=0.3,<2
+langchain-groq>=0.2,<2
+chromadb>=1.0,<2
+sentence-transformers>=3.3,<6
+pymupdf>=1.24,<2
+python-dotenv>=1.0,<2
+pydantic>=2.9,<3
+pandas>=2.2,<3
+numpy>=1.26,<3
+pytest>=8,<9
+typing-extensions>=4.12

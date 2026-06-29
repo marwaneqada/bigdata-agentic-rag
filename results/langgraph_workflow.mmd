@@ -1,0 +1,37 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	route_question(route_question)
+	retrieve_documents(retrieve_documents)
+	compare_technologies(compare_technologies)
+	calculate_storage(calculate_storage)
+	grade_documents(grade_documents)
+	rewrite_query(rewrite_query)
+	generate_answer(generate_answer)
+	verify_answer(verify_answer)
+	fallback_answer(fallback_answer)
+	finalize_answer(finalize_answer)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> route_question;
+	calculate_storage --> generate_answer;
+	compare_technologies --> grade_documents;
+	fallback_answer --> finalize_answer;
+	generate_answer --> verify_answer;
+	grade_documents -.-> fallback_answer;
+	grade_documents -.-> generate_answer;
+	grade_documents -.-> rewrite_query;
+	retrieve_documents --> grade_documents;
+	rewrite_query --> retrieve_documents;
+	route_question -.-> calculate_storage;
+	route_question -.-> compare_technologies;
+	route_question -.-> retrieve_documents;
+	verify_answer -.-> finalize_answer;
+	verify_answer -.-> generate_answer;
+	finalize_answer --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

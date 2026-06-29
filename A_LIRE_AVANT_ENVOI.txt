@@ -1,0 +1,15 @@
+CE PROJET DOIT ETRE EXECUTE AVANT LA REMISE.
+
+À faire :
+1. Ajouter votre clé Groq dans .env, sans la publier.
+2. Exécuter python ingest.py --reset.
+3. Lancer pytest -q.
+4. Tester l'application avec une question simple, une comparaison et un calcul.
+5. Exécuter les 20 questions d'évaluation.
+6. Vérifier results/evaluation_results.csv.
+7. Remplir le rapport avec les résultats réels.
+8. Pousser le code sur GitHub.
+9. Enregistrer la vidéo commentée.
+
+Ne prétendez pas que l'évaluation a été exécutée tant que les fichiers CSV et JSON n'ont
+pas été produits sur votre ordinateur.

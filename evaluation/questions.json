@@ -1,0 +1,217 @@
+[
+  {
+    "id": "S01",
+    "type": "simple",
+    "question": "Quel est le rôle principal d'Apache Airflow dans un pipeline Big Data ?",
+    "expected_topics": [
+      "orchestration",
+      "DAG",
+      "planification",
+      "surveillance"
+    ]
+  },
+  {
+    "id": "S02",
+    "type": "simple",
+    "question": "Qu'est-ce qu'un DAG dans Airflow ?",
+    "expected_topics": [
+      "graphe orienté sans cycle",
+      "tâches",
+      "dépendances"
+    ]
+  },
+  {
+    "id": "S03",
+    "type": "simple",
+    "question": "À quoi sert PythonOperator dans Airflow ?",
+    "expected_topics": [
+      "fonction Python",
+      "tâche Airflow"
+    ]
+  },
+  {
+    "id": "S04",
+    "type": "simple",
+    "question": "Quelle est la différence entre le port 9000 et le port 9001 de MinIO ?",
+    "expected_topics": [
+      "API S3",
+      "console web",
+      "9000",
+      "9001"
+    ]
+  },
+  {
+    "id": "S05",
+    "type": "simple",
+    "question": "Quelle est la fonction du NameNode dans HDFS ?",
+    "expected_topics": [
+      "métadonnées",
+      "blocs",
+      "DataNodes"
+    ]
+  },
+  {
+    "id": "S06",
+    "type": "simple",
+    "question": "Pourquoi HDFS utilise-t-il la réplication des blocs ?",
+    "expected_topics": [
+      "tolérance aux pannes",
+      "copies",
+      "DataNodes"
+    ]
+  },
+  {
+    "id": "S07",
+    "type": "simple",
+    "question": "Quelle est la différence entre KStream et KTable ?",
+    "expected_topics": [
+      "flux d'événements",
+      "vue mise à jour",
+      "agrégation"
+    ]
+  },
+  {
+    "id": "S08",
+    "type": "simple",
+    "question": "Quel est le rôle d'un checkpoint en Spark Structured Streaming ?",
+    "expected_topics": [
+      "état",
+      "reprise",
+      "progression",
+      "tolérance aux pannes"
+    ]
+  },
+  {
+    "id": "S09",
+    "type": "simple",
+    "question": "Pourquoi crée-t-on une vue temporaire avec Spark SQL ?",
+    "expected_topics": [
+      "requêtes SQL",
+      "DataFrame",
+      "vue temporaire"
+    ]
+  },
+  {
+    "id": "S10",
+    "type": "simple",
+    "question": "Qu'est-ce qu'un bucket dans un stockage objet MinIO ?",
+    "expected_topics": [
+      "conteneur logique",
+      "objets"
+    ]
+  },
+  {
+    "id": "C01",
+    "type": "complex",
+    "question": "Compare Airflow et Kafka Streams : rôle, type de traitement et cas d'utilisation.",
+    "expected_topics": [
+      "orchestration",
+      "stream processing",
+      "DAG",
+      "temps réel"
+    ]
+  },
+  {
+    "id": "C02",
+    "type": "complex",
+    "question": "Compare HDFS et MinIO pour construire un Data Lake pédagogique.",
+    "expected_topics": [
+      "stockage distribué",
+      "stockage objet",
+      "S3",
+      "blocs",
+      "métadonnées"
+    ]
+  },
+  {
+    "id": "C03",
+    "type": "complex",
+    "question": "Propose une architecture où Kafka, Spark Structured Streaming, HDFS et Airflow travaillent ensemble.",
+    "expected_topics": [
+      "ingestion",
+      "traitement",
+      "stockage",
+      "orchestration"
+    ]
+  },
+  {
+    "id": "C04",
+    "type": "complex",
+    "question": "Une tâche Airflow échoue temporairement à cause du réseau. Quelle stratégie appliquer et pourquoi ?",
+    "expected_topics": [
+      "retries",
+      "retry_delay",
+      "logs",
+      "relance"
+    ]
+  },
+  {
+    "id": "C05",
+    "type": "complex",
+    "question": "Dans quel cas Kafka est-il plus adapté que HDFS comme source de Spark Structured Streaming ?",
+    "expected_topics": [
+      "événements continus",
+      "faible latence",
+      "fichiers",
+      "micro-batch"
+    ]
+  },
+  {
+    "id": "C06",
+    "type": "complex",
+    "question": "Calcule le stockage physique nécessaire pour 500 GB de données avec compression 0.6, facteur de réplication 3 et 2 copies.",
+    "expected_topics": [
+      "500",
+      "0.6",
+      "3",
+      "2",
+      "1800 GB"
+    ]
+  },
+  {
+    "id": "C07",
+    "type": "complex",
+    "question": "Explique comment traiter des messages invalides avec Kafka Streams sans perdre les données.",
+    "expected_topics": [
+      "validation",
+      "Dead Letter Topic",
+      "routing"
+    ]
+  },
+  {
+    "id": "C08",
+    "type": "complex",
+    "question": "Comment détecter des mesures de capteurs anormales avec Spark Structured Streaming et conserver les alertes ?",
+    "expected_topics": [
+      "seuil",
+      "filtre",
+      "Parquet",
+      "HDFS",
+      "checkpoint"
+    ]
+  },
+  {
+    "id": "C09",
+    "type": "complex",
+    "question": "Compare Spark SQL et Kafka Streams pour analyser des données de ventes.",
+    "expected_topics": [
+      "batch",
+      "SQL",
+      "stream",
+      "agrégation continue"
+    ]
+  },
+  {
+    "id": "C10",
+    "type": "complex",
+    "question": "Conçois un pipeline de données fiable depuis l'ingestion jusqu'au rapport final en justifiant chaque outil.",
+    "expected_topics": [
+      "ingestion",
+      "stockage",
+      "validation",
+      "transformation",
+      "orchestration",
+      "rapport"
+    ]
+  }
+]

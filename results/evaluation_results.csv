@@ -1,0 +1,460 @@
+﻿id,type,question,route,answer,response_time_seconds,retrieved_sources,retrieval_relevance_0_1,verification_0_1,answer_quality_1_5,document_relevance_1_5,groundedness_1_5,evaluation_comments
+S01,simple,Quel est le rôle principal d'Apache Airflow dans un pipeline Big Data ?,retrieve,"Le rôle principal d'Apache Airflow dans un pipeline Big Data est d'orchestrer les workflows en définissant, planifiant, exécutant et surveillant les pipelines. Il permet de préciser l'ordre des étapes, d'observer leur état et de relancer les tâches qui échouent.
+
+Voici un tableau résumant les fonctionnalités d'Apache Airflow :
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Définition des pipelines | Définition des étapes et des dépendances entre les tâches |
+| Planification | Planification de l'exécution des tâches |
+| Exécution | Exécution des tâches en fonction du plan |
+| Surveillance | Observation de l'état des tâches et des pipelines |
+| Relance | Relance des tâches qui échouent |
+
+Sources utilisees :
+- 01_airflow.md — page 1",12.11,01_airflow.md — page 1,0.8,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents récupérés sont pertinents et utiles pour répondre à la question. La réponse met en évidence les fonctionnalités clés d'Apache Airflow, notamment l'orchestration, la planification, l'exécution et la surveillance des pipelines. Les exemples et les descriptions fournies sont précis et faciles à comprendre. La réponse montre une bonne compréhension du sujet et de la plateforme d'orchestration de workflows d'Apache Airflow."
+S02,simple,Qu'est-ce qu'un DAG dans Airflow ?,retrieve,"Un DAG (Directed Acyclic Graph) dans Airflow est un graphe orienté sans cycle qui représente un pipeline composé de tâches et de dépendances. Il définit les tâches à exécuter, leur ordre, la fréquence d'exécution et le comportement en cas d'échec.
+
+Voici les éléments clés d'un DAG dans Airflow :
+
+* Un DAG est un graphe orienté sans cycle, ce qui signifie qu'il n'y a pas de boucle dans le pipeline.
+* Un DAG représente un pipeline composé de tâches et de dépendances.
+* Les tâches sont des étapes individuelles du pipeline.
+* Les opérateurs définissent comment les tâches sont exécutées (par exemple, PythonOperator, BashOperator, EmptyOperator).
+* Le scheduler décide quand les DAGs et les tâches doivent être lancés.
+* Le worker exécute réellement les tâches.
+
+Voici un tableau résumant les éléments clés d'un DAG dans Airflow :
+
+| Élément | Description |
+| --- | --- |
+| DAG | Graphe orienté sans cycle représentant un pipeline |
+| Tâches | Étapes individuelles du pipeline |
+| Opérateurs | Définissent comment les tâches sont exécutées |
+| Scheduler | Décide quand les DAGs et les tâches doivent être lancés |
+| Worker | Exécute réellement les tâches |
+
+Sources utilisees :
+- 01_airflow.md — page 1",10.382,01_airflow.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien structurée. Les éléments clés d'un DAG dans Airflow sont bien définis et illustrés par un tableau récapitulatif."
+S03,simple,À quoi sert PythonOperator dans Airflow ?,retrieve,"**Réponse**
+
+Le PythonOperator dans Airflow sert à exécuter une fonction Python. Il permet de lancer une tâche qui consiste à exécuter un code Python spécifique.
+
+**Sources utilisées**
+
+- 01_airflow.md — page 1
+
+**Tableau récapitulatif**
+
+| Operator | Description |
+| --- | --- |
+| PythonOperator | Exécute une fonction Python |
+| BashOperator | Lance une commande Bash |
+| EmptyOperator | Structure le graphe |
+
+Note : Le contexte fourni ne permet pas de fournir plus d'informations sur le PythonOperator.",21.322,01_airflow.md — page 1,0.4,1.0,5,5,5,"La réponse est claire, complète et correcte. Les documents utilisés sont pertinents et soutiennent la réponse. Le contexte fourni est suffisant pour justifier la réponse."
+S04,simple,Quelle est la différence entre le port 9000 et le port 9001 de MinIO ?,retrieve,"La différence entre le port 9000 et le port 9001 de MinIO est la suivante :
+
+- Le port 9000 est utilisé par l'API S3 et les applications pour interagir avec MinIO.
+- Le port 9001 est utilisé par la console Web d'administration de MinIO, permettant de créer des buckets, déposer des objets, observer les métadonnées, télécharger et supprimer des objets.
+
+Voici un tableau résumant les informations :
+
+| Port | Utilisation |
+| --- | --- |
+| 9000 | API S3 et applications |
+| 9001 | Console Web d'administration |
+
+Sources utilisees :
+- 03_minio.md — page 1",18.219,03_minio.md — page 1,0.8,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents récupérés sont pertinents et les informations sont exactes. La réponse est également bien structurée et facile à comprendre."
+S05,simple,Quelle est la fonction du NameNode dans HDFS ?,retrieve,"La fonction du NameNode dans HDFS est de gérer les métadonnées, qui incluent :
+
+- Les noms et chemins des fichiers
+- Les blocs associés aux fichiers
+- L'emplacement des blocs
+- Les informations de réplication
+
+Le NameNode ne stocke pas directement le contenu utilisateur, mais il est responsable de la gestion des blocs et de leur réplication sur les DataNodes.
+
+Voici un tableau résumant les rôles des différents composants de HDFS :
+
+| Composant | Fonction |
+| --- | --- |
+| NameNode | Gestion des métadonnées |
+| DataNode | Stockage des blocs |
+
+Sources utilisees :
+- 02_hdfs.md — page 1",18.126,02_hdfs.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents récupérés sont pertinents et les informations sont exactes. Le tableau résumant les rôles des différents composants de HDFS est également utile pour comprendre la fonction du NameNode."
+S06,simple,Pourquoi HDFS utilise-t-il la réplication des blocs ?,retrieve,"Pourquoi HDFS utilise-t-il la réplication des blocs ?
+
+La réplication des blocs dans HDFS est utilisée pour augmenter la disponibilité des données en cas de panne d'un DataNode. En effet, si un DataNode tombe en panne, les données restent accessibles depuis les autres copies des blocs.
+
+Voici un tableau résumant les avantages de la réplication des blocs :
+
+| Avantages | Description |
+| --- | --- |
+| Disponibilité | Les données restent accessibles en cas de panne d'un DataNode |
+| Redondance | Plusieurs copies des blocs sont stockées sur différents DataNodes |
+
+Le facteur de réplication indique le nombre de copies physiques de chaque bloc. Un facteur 3 signifie que chaque bloc existe trois fois, ce qui augmente la disponibilité mais multiplie aussi la capacité physique requise.
+
+Sources utilisees :
+- 02_hdfs.md — page 1
+- 06_structured_streaming.md — page 1",39.516,02_hdfs.md — page 1 | 06_structured_streaming.md — page 1,0.8,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents récupérés sont pertinents et les informations sont exactes. La réponse répond parfaitement à la question et met en avant les avantages de la réplication des blocs dans HDFS."
+S07,simple,Quelle est la différence entre KStream et KTable ?,compare,"**Différence entre KStream et KTable**
+
+KStream et KTable sont deux types de structures de données utilisés dans la bibliothèque Kafka Streams pour traiter des flux d'événements. Voici les principales différences entre les deux :
+
+|  | KStream | KTable |
+| --- | --- | --- |
+| **Type de données** | Flux continu d'événements indépendants | Vue continuellement mise à jour, souvent produite par une agrégation |
+| **Fonctionnement** | Consomme des événements depuis des topics, transforme et filtre les messages | Effectue des agrégations et publie les résultats dans d'autres topics |
+| **Cas d'utilisation** | Traitement de flux en temps réel, transformation et filtration de messages | Agrégation de données, mise à jour de vues |
+
+En résumé, KStream est utilisé pour traiter des flux d'événements en temps réel, tandis que KTable est utilisé pour effectuer des agrégations et mettre à jour des vues de données.
+
+**Sources utilisées**
+
+- 04_kafka_streams.md — page 1",33.962,04_kafka_streams.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents récupérés sont pertinents et utiles pour répondre à la question. La réponse met en évidence les principales différences entre KStream et KTable, et fournit des exemples de cas d'utilisation pour chaque structure de données."
+S08,simple,Quel est le rôle d'un checkpoint en Spark Structured Streaming ?,retrieve,"Le rôle d'un checkpoint en Spark Structured Streaming est d'enregistrer la progression et l'état du traitement. Cela permet à l'application de reprendre sans retraiter toute la source si elle redémarre avec le même checkpoint.
+
+Un checkpoint est essentiel aux agrégations et à la tolérance aux pannes, car il permet de conserver l'état intermédiaire du traitement et de le reprendre en cas de panne.
+
+Voici un tableau résumant les avantages des checkpoints en Spark Structured Streaming :
+
+| Avantage | Description |
+| --- | --- |
+| Tolérance aux pannes | Permet de reprendre le traitement en cas de panne |
+| Agrégations | Permet de conserver l'état intermédiaire du traitement |
+| Réduction des temps de traitement | Permet de reprendre le traitement à partir du dernier checkpoint |
+
+Sources utilisees :
+- 06_structured_streaming.md — page 1",19.067,06_structured_streaming.md — page 1,0.8,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents récupérés sont pertinents et les éléments attendus sont bien abordés. Le rôle des checkpoints en Spark Structured Streaming est bien expliqué et les avantages sont clairement présentés."
+S09,simple,Pourquoi crée-t-on une vue temporaire avec Spark SQL ?,retrieve,"Une vue temporaire est créée avec Spark SQL pour associer un nom SQL à un DataFrame. Cela permet d'utiliser les colonnes du DataFrame dans une requête SQL, comme indiqué dans le contexte :
+
+- `createOrReplaceTempView(""bike_rentals_view"")` : crée une vue temporaire nommée ""bike_rentals_view"" associée au DataFrame.
+- `SELECT ... FROM bike_rentals_view` : utilise les colonnes du DataFrame dans une requête SQL.
+
+La vue est temporaire et liée à la session Spark, ce qui signifie qu'elle disparaît lorsque la session est fermée.
+
+**Sources utilisees**
+- 05_spark_sql.md — page 1",15.873,05_spark_sql.md — page 1,0.8,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les éléments attendus sont bien abordés et les exemples de code sont pertinents. La source utilisée est également correcte."
+S10,simple,Qu'est-ce qu'un bucket dans un stockage objet MinIO ?,retrieve,"Un bucket dans un stockage objet MinIO est un conteneur logique qui permet d'organiser les objets. Un objet peut être un fichier de type CSV, image, log, PDF ou modèle d'intelligence artificielle. La clé d'objet identifie l'objet dans le bucket, par exemple `ventes/2026/ventes.csv`. Les métadonnées décrivent notamment la taille, le type, la date, le propriétaire ou les permissions.
+
+Voici un tableau résumant les éléments clés d'un bucket dans MinIO :
+
+| Élément | Description |
+| --- | --- |
+| Bucket | Conteneur logique pour organiser les objets |
+| Objet | Fichier de type CSV, image, log, PDF ou modèle d'intelligence artificielle |
+| Clé d'objet | Identifie l'objet dans le bucket (par exemple `ventes/2026/ventes.csv`) |
+| Métadonnées | Décrivent la taille, le type, la date, le propriétaire ou les permissions de l'objet |
+
+Sources utilisees :
+- 03_minio.md — page 1",28.115,03_minio.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les éléments clés d'un bucket dans MinIO sont correctement identifiés et expliqués. La réponse répond également aux attentes de la question."
+C01,complex,"Compare Airflow et Kafka Streams : rôle, type de traitement et cas d'utilisation.",compare,"**Rôle**
+
+- Airflow : orchestration de workflows, définir, planifier, exécuter et surveiller des pipelines.
+- Kafka Streams : traitement d'événements en temps réel, consommer des événements, transformer et publier les résultats.
+
+**Type de traitement**
+
+- Airflow : orchestration de pipelines, ingestion, stockage brut, validation, nettoyage, transformation, calcul d'indicateurs, chargement des résultats et génération d'un rapport.
+- Kafka Streams : traitement d'événements en temps réel, consommer des événements, transformer et publier les résultats.
+
+**Cas d'utilisation**
+
+- Airflow : pipelines Big Data, automatiser, superviser, traçable, fiable, maintenable et compréhensible.
+- Kafka Streams : événements continus, réactions à faible latence, traitement de flux directement au-dessus d'Apache Kafka.
+
+**Comparaison**
+
+|  | Airflow | Kafka Streams |
+| --- | --- | --- |
+| Rôle | Orchestration de workflows | Traitement d'événements en temps réel |
+| Type de traitement | Orchestration de pipelines | Traitement d'événements en temps réel |
+| Cas d'utilisation | Pipelines Big Data | Événements continus, réactions à faible latence |
+
+Sources utilisees :
+- 04_kafka_streams.md — page 1
+- 06_structured_streaming.md — page 1
+- 01_airflow.md — page 1",57.188,04_kafka_streams.md — page 1 | 06_structured_streaming.md — page 1 | 01_airflow.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien structurée. Les éléments attendus sont bien abordés et les comparaisons entre Airflow et Kafka Streams sont précises."
+C02,complex,Compare HDFS et MinIO pour construire un Data Lake pédagogique.,compare,"**Comparaison de HDFS et MinIO pour construire un Data Lake pédagogique**
+
+**Rôle et fonctionnement**
+
+| Technologie | Rôle | Fonctionnement |
+| --- | --- | --- |
+| HDFS | Stockage distribué de fichiers | Un cluster HDFS contient un NameNode et plusieurs DataNodes. Le NameNode gère les métadonnées et les DataNodes stockent les blocs. |
+| MinIO | Stockage objet compatible S3 | MinIO expose une abstraction de stockage objet avec buckets, clés et API S3. |
+
+**Avantages**
+
+| Technologie | Avantages |
+| --- | --- |
+| HDFS | Tolérance aux pannes, stockage distribué, réplication de blocs |
+| MinIO | API compatible S3, stockage objet, buckets, clés et métadonnées |
+
+**Limites**
+
+| Technologie | Limites |
+| --- | --- |
+| HDFS | Adapté à l'arrivée progressive de fichiers, pas adapté pour les événements en continu |
+| MinIO | Pas adapté pour le stockage de fichiers découpés en blocs distribués |
+
+**Cas d'utilisation**
+
+| Technologie | Cas d'utilisation |
+| --- | --- |
+| HDFS | Stockage de fichiers pour les applications de Data Lake, tolérance aux pannes |
+| MinIO | Stockage objet pour les applications qui utilisent des opérations S3 et manipulent des objets par HTTP |
+
+**Sources utilisées**
+
+- 02_hdfs.md — page 1
+- 06_structured_streaming.md — page 1
+- 03_minio.md — page 1",72.55,02_hdfs.md — page 1 | 06_structured_streaming.md — page 1 | 03_minio.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents utilisés sont pertinents et les informations sont exactes. La comparaison entre HDFS et MinIO est bien faite et les avantages et limites de chaque technologie sont clairement exposés."
+C03,complex,"Propose une architecture où Kafka, Spark Structured Streaming, HDFS et Airflow travaillent ensemble.",retrieve,"Architecture proposée :
+
+**Composants**
+
+* Kafka : pour la gestion des événements en temps réel
+* Spark Structured Streaming : pour le traitement des données en continu
+* HDFS : pour le stockage des données
+* Airflow : pour l'orchestration des pipelines
+
+**Flux de données**
+
+1. Les événements arrivent continuellement dans Kafka.
+2. Kafka Streams consomme les événements et les traite en temps réel.
+3. Les résultats sont publiés dans un topic de sortie.
+4. Spark Structured Streaming lit les données du topic de sortie et les traite en continu.
+5. Les résultats sont stockés dans HDFS.
+6. Airflow orchestre les étapes du pipeline, y compris la lecture des données de HDFS, le traitement avec Spark Structured Streaming et l'écriture des résultats dans un nouveau topic.
+
+**Architecture**
+
+| Composant | Fonction |
+| --- | --- |
+| Kafka | Gestion des événements en temps réel |
+| Kafka Streams | Traitement des événements en temps réel |
+| Spark Structured Streaming | Traitement des données en continu |
+| HDFS | Stockage des données |
+| Airflow | Orchestration des pipelines |
+
+**Avantages**
+
+* Traitement des événements en temps réel avec Kafka Streams
+* Traitement des données en continu avec Spark Structured Streaming
+* Stockage des données dans HDFS
+* Orchestration des pipelines avec Airflow
+
+**Sources utilisées**
+
+- 06_structured_streaming.md — page 1
+- 04_kafka_streams.md — page 1
+- 01_airflow.md — page 1",35.381,06_structured_streaming.md — page 1 | 04_kafka_streams.md — page 1 | 01_airflow.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents utilisés sont pertinents et bien expliqués. L'architecture proposée est bien détaillée et les avantages sont clairement identifiés."
+C04,complex,Une tâche Airflow échoue temporairement à cause du réseau. Quelle stratégie appliquer et pourquoi ?,retrieve,"**Stratégie pour résoudre un échec temporaire d'une tâche Airflow due au réseau**
+
+La stratégie à appliquer est de réessayer la tâche après un certain délai, en utilisant la fonctionnalité de retry de Airflow. Cela permet de gérer les échecs temporaires dus au réseau et de garantir la fiabilité du pipeline.
+
+**Pourquoi cette stratégie ?**
+
+* Les échecs temporaires dus au réseau sont courants dans les environnements de production.
+* La fonctionnalité de retry de Airflow permet de réessayer la tâche après un certain délai, ce qui réduit les risques de perte de données ou de défaillance du pipeline.
+* Cette stratégie est conforme aux principes de fiabilité et de maintenabilité de Airflow.
+
+**Tableau résumant la stratégie**
+
+| Étape | Description |
+| --- | --- |
+| 1 | Définir la tâche avec la fonctionnalité de retry |
+| 2 | Configurer le délai de réessai |
+| 3 | Réessayer la tâche après le délai configuré |
+
+**Sources utilisées**
+
+- 01_airflow.md — page 1",29.407,01_airflow.md — page 1,0.4,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les éléments attendus sont tous présents et bien expliqués. La stratégie proposée est pertinente et conforme aux principes de fiabilité et de maintenabilité d'Airflow. Les sources utilisées sont pertinentes et bien citées."
+C05,complex,Dans quel cas Kafka est-il plus adapté que HDFS comme source de Spark Structured Streaming ?,compare,"Kafka est plus adapté que HDFS comme source de Spark Structured Streaming dans les cas suivants :
+
+- Lorsque les événements arrivent continuellement, avec une faible latence et un besoin de lecture ordonnée depuis des topics.
+- Lorsque les événements sont traités en temps réel et nécessitent des réactions à faible latence.
+
+Voici un tableau résumant les différences entre Kafka et HDFS :
+
+|  | Kafka | HDFS |
+| --- | --- | --- |
+| **Type de données** | Événements continus | Fichiers |
+| **Latence** | Faible latence | Plus grande latence |
+| **Lecture ordonnée** | Oui | Non |
+| **Traitement en temps réel** | Oui | Non |
+
+Sources :
+- 02_hdfs.md — page 1
+- 06_structured_streaming.md — page 1
+- 04_kafka_streams.md — page 1",62.98,02_hdfs.md — page 1 | 06_structured_streaming.md — page 1 | 04_kafka_streams.md — page 1,0.8,1.0,5,5,5,"La réponse est claire, complète et bien soutenue par le contexte. Les éléments attendus sont bien abordés et les différences entre Kafka et HDFS sont bien expliquées. La réponse est également bien documentée avec des sources et un contexte appropriés."
+C06,complex,"Calcule le stockage physique nécessaire pour 500 GB de données avec compression 0.6, facteur de réplication 3 et 2 copies.",calculate,"Pour calculer le stockage physique nécessaire, nous utiliserons la formule fournie par l'outil local `calculate_storage_capacity` :
+
+data_size_gb × compression_ratio × replication_factor × number_of_copies
+
+Nous remplaçons les valeurs données :
+
+- data_size_gb = 500 GB
+- compression_ratio = 0,6
+- replication_factor = 3
+- number_of_copies = 2
+
+Nous calculons le stockage physique nécessaire :
+
+500 GB × 0,6 × 3 × 2 = 1800 GB
+
+Le stockage physique nécessaire est donc de 1800 GB.
+
+**Sources utilisées**
+- Outil local : calculate_storage_capacity",13.692,Outil local : calculate_storage_capacity,1.0,1.0,5,5,5,"La réponse est correcte, complète et claire. La formule utilisée est bien expliquée et les valeurs sont remplacées correctement."
+C07,complex,Explique comment traiter des messages invalides avec Kafka Streams sans perdre les données.,retrieve,"Pour traiter des messages invalides avec Kafka Streams sans perdre les données, vous pouvez utiliser un Dead Letter Topic (DLT). Un DLT est un topic spécifique qui stocke les messages invalides ou rejetés afin de ne pas les perdre et de permettre leur analyse.
+
+Voici les étapes à suivre :
+
+1. Configurez un DLT pour stocker les messages invalides.
+2. Dans votre pipeline de traitement, utilisez des fonctions de validation et de nettoyage pour détecter les messages invalides.
+3. Lorsqu'un message est détecté comme invalide, routez-le vers le DLT.
+4. Analysez les messages stockés dans le DLT pour identifier les problèmes et les corriger.
+
+Voici un tableau résumant les étapes :
+
+| Étape | Description |
+| --- | --- |
+| 1 | Configurez un DLT |
+| 2 | Validez et nettoyez les messages |
+| 3 | Routez les messages invalides vers le DLT |
+| 4 | Analysez les messages stockés dans le DLT |
+
+Sources utilisees :
+
+- 04_kafka_streams.md — page 1
+- 06_structured_streaming.md — page 1",28.598,04_kafka_streams.md — page 1 | 06_structured_streaming.md — page 1,0.8,1.0,5,5,5,"La réponse est claire, complète et bien soutenue par le contexte. Les étapes pour traiter des messages invalides avec Kafka Streams sont bien décrites et le tableau résumant les étapes est utile. Les sources utilisées sont également pertinentes et bien citées."
+C08,complex,Comment détecter des mesures de capteurs anormales avec Spark Structured Streaming et conserver les alertes ?,retrieve,"**Détection de mesures de capteurs anormales avec Spark Structured Streaming**
+
+Pour détecter des mesures de capteurs anormales avec Spark Structured Streaming, vous pouvez suivre les étapes suivantes :
+
+1. **Définir un schéma explicite** pour les données de capteurs, en spécifiant les types de colonnes et les statistiques à calculer.
+2. **Utiliser la fonction `when`** pour détecter les valeurs anormales en fonction de seuils spécifiques pour chaque type de capteur.
+3. **Enregistrer les alertes** dans HDFS au format Parquet, avec une colonne `statut` contenant `NORMAL` ou `ANORMAL`.
+
+Voici un exemple de code pour illustrer ces étapes :
+```scala
+import org.apache.spark.sql.SparkSession
+
+val spark = SparkSession.builder.appName(""Capteurs"").getOrCreate()
+
+val schema = StructType(
+  List(
+    StructField(""capteur"", StringType, true),
+    StructField(""valeur"", DoubleType, true)
+  )
+)
+
+val df = spark.readStream
+  .schema(schema)
+  .option(""maxFilesPerTrigger"", 10)
+  .option(""checkpointLocation"", ""hdfs://.../checkpoints"")
+  .csv(""hdfs://.../donnees"")
+
+val dfAnormales = df
+  .filter(df(""valeur"") > 35 || df(""valeur"") > 80)
+  .withColumn(""statut"", when(df(""valeur"") > 35, ""ANORMAL"").otherwise(""NORMAL""))
+
+dfAnormales
+  .writeStream
+  .format(""parquet"")
+  .option(""checkpointLocation"", ""hdfs://.../checkpoints"")
+  .trigger(Trigger.ProcessingTime(""1 minute""))
+  .outputMode(""append"")
+  .start()
+  .awaitTermination()
+```
+**Sources utilisées**
+
+- 06_structured_streaming.md — page 1",26.805,06_structured_streaming.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les étapes décrites sont précises et les exemples de code sont pertinents. Les sources utilisées sont également pertinentes et bien intégrées dans le contexte."
+C09,complex,Compare Spark SQL et Kafka Streams pour analyser des données de ventes.,compare,"**Comparaison de Spark SQL et Kafka Streams pour analyser des données de ventes**
+
+**Rôle et fonctionnement**
+
+| Technologie | Rôle | Fonctionnement |
+| --- | --- | --- |
+| Spark SQL | Analyse de données structurées | Utilise des DataFrames et des requêtes SQL pour analyser des données structurées |
+| Kafka Streams | Traitement d'événements en temps réel | Consomme des événements depuis des topics, transforme et filtre les messages, effectue des agrégations et publie les résultats dans d'autres topics |
+
+**Avantages et limites**
+
+| Technologie | Avantages | Limites |
+| --- | --- | --- |
+| Spark SQL | Convenu aux analyses batch ou interactives sur des données déjà disponibles | Pas adapté pour les événements continus |
+| Kafka Streams | Adapté aux événements continus et aux réactions à faible latence | Pas convenu pour les analyses batch ou interactives |
+
+**Cas d'utilisation**
+
+| Technologie | Cas d'utilisation |
+| --- | --- |
+| Spark SQL | Analyse de données structurées, recherche de locations de vélos, calcul de revenu total, comptage de locations par station, etc. |
+| Kafka Streams | Traitement d'événements continus, transformation de messages, agrégation de données, etc. |
+
+**Sources utilisées**
+
+- 04_kafka_streams.md — page 1
+- 05_spark_sql.md — page 1
+- 06_structured_streaming.md — page 1",58.634,04_kafka_streams.md — page 1 | 05_spark_sql.md — page 1 | 06_structured_streaming.md — page 1,0.8,1.0,5,5,5,"La réponse est complète, claire et bien soutenue par le contexte. Les documents utilisés sont pertinents et bien intégrés dans la réponse. La comparaison entre Spark SQL et Kafka Streams est bien faite et les avantages et limites de chaque technologie sont clairement exposés. La réponse répond bien aux éléments attendus et les cas d'utilisation sont bien illustrés."
+C10,complex,Conçois un pipeline de données fiable depuis l'ingestion jusqu'au rapport final en justifiant chaque outil.,retrieve,"**Pipeline de données fiable**
+
+Pour concevoir un pipeline de données fiable, nous allons utiliser les outils suivants :
+
+1. **Airflow** : pour la coordination des outils et la création d'un pipeline automatisé.
+2. **Structured Streaming** : pour la traitement des données en flux et micro-batch.
+3. **Spark SQL** : pour les analyses batch ou interactives sur des données déjà disponibles.
+4. **MinIO** : pour le stockage objet compatible S3.
+
+**Étape 1 : Ingestion des données**
+
+* Utiliser **MinIO** pour stocker les données sous forme d'objets.
+* Créer un bucket pour les données d'entrée.
+* Utiliser **Structured Streaming** pour lire les données du bucket et les traiter en flux.
+
+**Étape 2 : Traitement des données**
+
+* Utiliser **Structured Streaming** pour traiter les données en flux et micro-batch.
+* Appliquer les filtres, les agrégations, les regroupements et les analyses temporelles nécessaires.
+* Utiliser **Spark SQL** pour les analyses batch ou interactives sur les données traitées.
+
+**Étape 3 : Stockage des données**
+
+* Utiliser **MinIO** pour stocker les données traitées sous forme d'objets.
+* Créer un bucket pour les données traitées.
+
+**Étape 4 : Rapport final**
+
+* Utiliser **Airflow** pour coordonner les outils et créer un pipeline automatisé.
+* Utiliser **Spark SQL** pour générer le rapport final à partir des données traitées.
+
+**Justification**
+
+* **Airflow** permet de créer un pipeline automatisé et supervisé, ce qui garantit la fiabilité du traitement des données.
+* **Structured Streaming** permet de traiter les données en flux et micro-batch, ce qui permet de traiter les données en temps réel.
+* **Spark SQL** permet de faire des analyses batch ou interactives sur les données traitées, ce qui permet de générer des rapports finals précis.
+* **MinIO** permet de stocker les données sous forme d'objets, ce qui permet de stocker les données de manière fiable et sécurisée.
+
+**Tableau récapitulatif**
+
+| Étape | Outil |
+| --- | --- |
+| Ingestion | MinIO |
+| Traitement | Structured Streaming |
+| Stockage | MinIO |
+| Rapport final | Airflow, Spark SQL |
+
+**Sources utilisées**
+
+- 01_airflow.md — page 1
+- 06_structured_streaming.md — page 1
+- 05_spark_sql.md — page 1
+- 03_minio.md — page 1",46.587,01_airflow.md — page 1 | 06_structured_streaming.md — page 1 | 05_spark_sql.md — page 1 | 03_minio.md — page 1,0.6,1.0,5,5,5,"La réponse est complète, claire et bien justifiée. Les outils utilisés sont pertinents et bien expliqués. La justification est détaillée et les sources utilisées sont pertinentes. Le tableau récapitulatif est utile pour visualiser les étapes du pipeline. La réponse répond à toutes les exigences de la question."

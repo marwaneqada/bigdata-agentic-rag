@@ -1,0 +1,30 @@
+BIG DATA AGENTIC RAG — COMMANDES WINDOWS
+
+1. Ouvrir PowerShell dans le dossier du projet.
+
+2. Créer l'environnement :
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+3. Installer :
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+4. Configurer :
+Copy-Item .env.example .env
+notepad .env
+
+5. Indexer :
+python ingest.py --reset
+
+6. Tester :
+pytest -q
+
+7. Lancer :
+streamlit run app.py
+
+8. Graphe :
+python generate_graph.py
+
+9. Évaluation :
+python -m evaluation.run_evaluation

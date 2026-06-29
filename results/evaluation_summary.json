@@ -1,0 +1,9 @@
+{
+  "questions": 20,
+  "simple_questions": 10,
+  "complex_questions": 10,
+  "average_response_time_seconds": 32.426,
+  "average_answer_quality_1_5": 5.0,
+  "average_document_relevance_1_5": 5.0,
+  "average_groundedness_1_5": 5.0
+}
